@@ -45,7 +45,7 @@ App = {
       App.contracts.Adoption.setProvider(App.web3Provider);
     
       // Use our contract to retrieve and mark the adopted pets
-      return App.markAdopted();
+      // return App.markAdopted();
     });
     return App.bindEvents();
   },
@@ -60,7 +60,6 @@ App = {
     
     App.contracts.Adoption.deployed().then(function(instance) {
       adoptionInstance = instance;
-    
       return adoptionInstance.getAdopters.call();
     }).then(function(adopters) {
       for (i = 0; i < adopters.length; i++) {
