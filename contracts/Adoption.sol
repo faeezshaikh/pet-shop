@@ -10,4 +10,9 @@ contract Adoption {
 
         return petId;
     }
+
+    // Retrieving the adopters
+    function getAdopters() constant public returns (address[16]) {
+         return adopters;
+    }
 }
